@@ -1,9 +1,10 @@
+using System;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace DotNetAPI.Players.Entities
 {
-    public class Player
+    public class Character
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
