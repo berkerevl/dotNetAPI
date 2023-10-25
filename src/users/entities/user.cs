@@ -1,6 +1,7 @@
 using System;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using BCrypt.Net;
 
 namespace DotNetAPI.Users.Entities
 {
@@ -25,15 +26,30 @@ namespace DotNetAPI.Users.Entities
         [BsonElement("Phone")]
         public string? Phone { get; set; }
 
+        [BsonElement("Password")]
+        [BsonRequired]
+        public string Password { get; private set; }
+
         [BsonElement("TotalWealth")]
         public double TotalWealth { get; set; }
 
-        public User(string firstName, string lastName, string email, double totalWealth)
+        public User(string firstName, string lastName, string email, string password, double totalWealth)
         {
             FirstName = firstName ?? throw new ArgumentNullException(nameof(firstName));
             LastName = lastName ?? throw new ArgumentNullException(nameof(lastName));
             Email = email ?? throw new ArgumentNullException(nameof(email));
+            Password = HashPassword(password ?? throw new ArgumentNullException(nameof(password)));
             TotalWealth = totalWealth;
+        }
+
+        public static string HashPassword(string password)
+        {
+            return BCrypt.Net.BCrypt.HashPassword(password);
+        }
+
+        public bool ValidatePassword(string password)
+        {
+            return BCrypt.Net.BCrypt.Verify(password, Password);
         }
     }
 }
