@@ -1,3 +1,4 @@
+using System;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
@@ -7,14 +8,14 @@ namespace DotNetAPI.Organizations.Entities
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; } = string.Empty;  // Initialize Id with an empty string.
+        public string Id { get; set; } = string.Empty;
 
         [BsonElement("OrganizationName")]
         [BsonRequired]
         public string OrganizationName { get; set; }
 
         [BsonElement("BannedList")]
-        public string[]? BannedList { get; set; }  // BannedList is nullable.
+        public string[]? BannedList { get; set; }
 
         [BsonElement("CreatedAt")]
         [BsonRequired]
@@ -25,7 +26,7 @@ namespace DotNetAPI.Organizations.Entities
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         [BsonElement("DeletedAt")]
-        public DateTime? DeletedAt { get; set; }  // DeletedAt is nullable.
+        public DateTime? DeletedAt { get; set; }
 
         [BsonElement("ApiKey")]
         [BsonRepresentation(BsonType.String)]
