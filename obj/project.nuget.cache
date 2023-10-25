@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "t2Fchbr4/D9Ya2BXzD2HPz3a+OyEgSGTDdsszB3EM/0CtMyHlBt7Dc8pGhn2NUoL/xrvdErISk+bYQ/jzcK3Rg==",
+  "dgSpecHash": "/M2Vhj834RVTIqb0VA2/FvXJakld7d6AygCy3Hi9qSQbi7TgXmA5cyEpX3pAJBw1MfFPKZR1znaofmvy2IePCg==",
   "success": true,
   "projectFilePath": "C:\\Users\\berker\\Desktop\\projects\\dotNetAPI\\dotNetAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\berker\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\berker\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
+    "C:\\Users\\berker\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\berker\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\berker\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.0\\microsoft.entityframeworkcore.6.0.0.nupkg.sha512",
     "C:\\Users\\berker\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.0\\microsoft.entityframeworkcore.abstractions.6.0.0.nupkg.sha512",
