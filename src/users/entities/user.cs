@@ -23,12 +23,27 @@ namespace DotNetAPI.Users.Entities
         [BsonRequired]
         public string Email { get; set; }
 
-        [BsonElement("Phone")]
-        public string? Phone { get; set; }
+        [BsonElement("PhoneNumber")]
+        public string? PhoneNumber { get; set; }
 
         [BsonElement("Password")]
         [BsonRequired]
-        public string Password { get; private set; }
+        public string Password { get; set; }
+
+        [BsonElement("OrganizationId")]
+        public string OrganizationId { get; set; }
+
+        [BsonElement("NickName")]
+        public string NickName { get; set; }
+
+        [BsonElement("CreatedAt")]
+        public DateTime CreatedAt { get; set; }
+
+        [BsonElement("UpdatedAt")]
+        public DateTime UpdatedAt { get; set; }
+
+        [BsonElement("DeletedAt")]
+        public DateTime? DeletedAt { get; set; }
 
         [BsonElement("TotalWealth")]
         public double TotalWealth { get; set; }
